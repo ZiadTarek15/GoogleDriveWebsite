@@ -6,9 +6,9 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $passwordconfirmation = $_POST['passwordconfirmation'];
 
-$query = mysql_query("INSERT INTO 'drive_db'.'academic_staff'('fst_name','lst_name','as_email','as_pass') 
-					  VALUES ('$fname','$lname','$email','$password')");
-if($GLOBALS['conn'->query($query)===TRUE)
+$query = "INSERT INTO `drive_db`.`academic_staff`(`fst_name`,`lst_name`,`as_email`,`as_pass`) 
+					  VALUES ('$fname','$lname','$email','$password')";
+if($GLOBALS['conn']->query($query)===TRUE)
 {
 	echo "New Record Added";
 }else{

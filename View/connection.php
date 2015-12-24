@@ -1,5 +1,5 @@
 <?php
-$GLOBALS['conn'] = new mysqli('localhost', 'root', '', 'drive_db');;
+$GLOBALS['conn'] = new mysqli('localhost', 'root', '', 'drive_db');
 function connect()
 	{
 		
