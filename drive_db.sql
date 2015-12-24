@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `academic_staff` (
-  `as_id` int(20) NOT NULL DEFAULT '0',
+  `as_id` int(20) NOT NULL AUTO_INCREMENT,
   `as_pass` varchar(10) DEFAULT NULL,
   `as_email` varchar(30) DEFAULT NULL,
   `fst_name` varchar(20) NOT NULL,
