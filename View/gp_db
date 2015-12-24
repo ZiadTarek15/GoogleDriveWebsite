@@ -1,0 +1,12 @@
+<?php 
+include 'connection.php';
+$projectName = $_GET['projname'];
+$year = $_GET['year'];
+$description = $_GET['description'];
+$doctor = $_GET['doctor'];
+$teammemers = $_GET['names'];
+$membersnos = $_GET['nos'];
+$membersmails = $_GET['emails'];
+connect();
+insert($projname, $year,$description,$doctor,$names,$nos,$emails);
+?>
