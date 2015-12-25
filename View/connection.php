@@ -18,39 +18,28 @@ function insert($id, $name, $year, $class)
     echo "Error: " . $sql . "<br>" . $GLOBALS['conn']->error;
 		}
 	}
-function viewDescription()
-	 {
-		$query = "SELECT announcement.description FROM announcement INNER JOIN follow 
-					ON announcement.course_code = follow.course_code AND follow.as_id = 1100556";
-	    $result = $GLOBALS['conn']->query($query);
-	    if($result->num_rows>0)
-	    {
-	    	$description = $result->fetch_assoc();
-	    	echo $description["description"];
-	    }
-
-	}
-function viewCoursename()
+function viewAnnouncement($id)
 	{
-		$query = "SELECT course.course_name FROM course, announcement INNER JOIN follow 
-					ON announcement.course_code = follow.course_code AND follow.as_id = 1100556";
+		$query = "SELECT announcement.description, announcement.date 
+				FROM announcement INNER JOIN follow 
+				ON announcement.course_code = follow.course_code WHERE follow.as_id = $id";
 	    $result = $GLOBALS['conn']->query($query);
+	    $x = "SELECT course.course_name FROM course INNER JOIN follow ON course.course_code = follow.course_code
+	     WHERE follow.as_id = $id";
+	    $result2 = $GLOBALS['conn']->query($x);
+	    $course = $result2->fetch_assoc();
 	    if($result->num_rows>0)
 	    {
-	    	$course = $result->fetch_assoc();
-	    	echo $course["course_name"];
+	    	while($Des = $result->fetch_assoc())
+	    	{
+	    		echo"<tr>";
+	    		echo "<td>$Des[description]</td>";
+	    		echo "<td>$course[course_name]</td>";
+	    		echo "<td>$Des[date]</td>";
+	    		echo"</tr>";
+	    	}
 	    }
 	}
-function viewDate() {
-	$query = "SELECT announcement.date FROM announcement INNER JOIN follow 
-					ON announcement.course_code = follow.course_code AND follow.as_id = 1100556";
-	    $result = $GLOBALS['conn']->query($query);
-	    if($result->num_rows>0)
-	    {
-	    	$date = $result->fetch_assoc();
-	    	echo $date["date"];
-	    }
-}
 function viewUsername($id)
 	{
 		$query = "SELECT fst_name FROM academic_staff WHERE as_id = $id";
@@ -60,5 +49,5 @@ function viewUsername($id)
 	    	$username = $result->fetch_assoc();
 	    	echo $username["fst_name"];
 	    }
-	}	
+	}
 ?>

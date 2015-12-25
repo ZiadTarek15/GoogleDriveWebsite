@@ -23,6 +23,7 @@
 <style>
    body{
     font-family: 'Handlee', cursive;
+    color: #696969;
    }
 
 </style>
@@ -63,8 +64,9 @@
                   viewUsername($id);
                   ?>
                 </a>
-                <ul class="dropdown-menu">
-                 <li>Sign Out</li> 
+                <ul class="dropdown-menu" style="border-radius:0;border: 0px;
+                 background-color: #ededed;padding-bottom: 5px;">
+                 <a href="#" style=" text-decoration:none;margin-left: 30px;margin-right: 30px;color: #696969;">Sign Out</a> 
                 </ul>
               </li>
             </ul>

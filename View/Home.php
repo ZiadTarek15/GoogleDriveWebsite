@@ -4,6 +4,7 @@
 		margin-top:-20px;
 		background-color: rbga(0,0,0,0);
 		height: 625px;
+		color: #696969;
 	}
 	#left {
 		width: 250px;
@@ -19,7 +20,7 @@
 		margin-top: 100px;
 	}
 	#left .dropdown a{
-		color:black;
+		color: #696969;
 		border: 0px; 
 		box-shadow: none;
 		background-color:transparent;
@@ -68,17 +69,26 @@
 		z-index: 1;
 		box-shadow: 0px 1px 1px #888888;
 	}
+	td {
+		padding-right: 50px; 
+		font-size: 12px; 
+		padding-left: 10px;
+		box-shadow: 0px 0.5px 0.5px #888888;
+		height: 50px;
+	}
 </style>
 
 <div id="body">
 	<div id ="left">
 		<div id="categorize">
 		<div class="dropdown" id = "E3dady">
-			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
+          	<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="dep.php?department_id='0'">
+				<img alt="Brand" src="../images/folder.png" width="20" height="20" id="logo" style="margin-top: -10px;">
 				Preparatory</a>
 		</div>
-		<div class="dropdown" id = "ONE">
-			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
+		<div class="dropdown" id = "ONE" style="box-shadow: 0px 0.2px 0.5px #888888;">
+			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="dep.php?department_id='1'">
+				<img alt="Brand" src="../images/folder.png" width="20" height="20" id="logo" style="margin-top: -10px;">
 				First</a>
 			<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
 				<li><a href="#">Electrical</a></li>	
@@ -90,8 +100,9 @@
 				<li><a href="#">Mechanical</a></li>
 			</ul>
 		</div>
-		<div class="dropdown" id = "TWO">
-			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
+		<div class="dropdown" id = "TWO" style="box-shadow: 0px 0.2px 0.5px #888888;">
+			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="dep.php?department_id='2'">
+				<img alt="Brand" src="../images/folder.png" width="20" height="20" id="logo" style="margin-top: -10px;">
 				Second</a>
 			<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
 				<li><a href="#">Electrical</a></li>
@@ -103,8 +114,9 @@
 				<li><a href="#">Mechanical</a></li>
 			</ul>
 		</div>
-		<div class="dropdown" id = "THREE">
-			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
+		<div class="dropdown" id = "THREE" style="box-shadow: 0px 0.2px 0.5px #888888;">
+			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="dep.php?department_id='3'">
+				<img alt="Brand" src="../images/folder.png" width="20" height="20" id="logo" style="margin-top: -10px;">
 				Third</a>
 			<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
 				<li class="dropdown-submenu">
@@ -141,8 +153,9 @@
 				</li>
 			</ul>
 		</div>
-		<div class="dropdown" id = "FOUR">
-			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
+		<div class="dropdown" id = "FOUR" style="box-shadow: 0px 0.2px 0.5px #888888;">
+			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="dep.php?department_id='4'">
+				<img alt="Brand" src="../images/folder.png" width="20" height="20" id="logo" style="margin-top: -10px;">
 				Fourth</a>
 			<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
 				<li class="dropdown-submenu">
@@ -188,33 +201,6 @@
 				</li>
 			</ul>
 		</div>
-	<!--
-		<div class="dropdown">
-            <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
-                Dropdown <span class="caret"></span>
-            </a>
-    		<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-              <li><a href="#">Some action</a></li>
-              <li><a href="#">Some other action</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-submenu">
-                <a tabindex="-1" href="#">Hover me for more options</a>
-                <ul class="dropdown-menu">
-                  <li><a tabindex="-1" href="#">Second level</a></li>
-                  <li class="dropdown-submenu">
-                    <a href="#">Even More..</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">3rd level</a></li>
-                    	<li><a href="#">3rd level</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Second level</a></li>
-                  <li><a href="#">Second level</a></li>
-                </ul>
-              </li>
-            </ul>
-        </div>
-	-->
 		</div>
 
 	</div>
@@ -227,25 +213,21 @@
 			        </a>
 		      	</li>
 		        <li style="text-align: left;margin-left: -230px;"><h4>Drive</h4></li>
-		        <li style="margin-left: 135px;font-size: 20px;">ANNOUNCEMENTS</li>
+		        <li style="margin-left: 135px;font-size: 18px;">ANNOUNCEMENTS</li>
         	</ul>
 			</div>
 		</div>
 		<div id="rightbar">
 			<div id="rightcontent">
-				<table>
+				<table id="annTable">
 				  <tr id="firstROW" style="border-bottom: 1px solid #bdbdbd;">
-				    <td style="width:100%;padding-bottom: 10px; padding-left: 10px; font-size: 20px;">Description</td>
-				    <td style="padding-right: 50px; font-size: 20px; padding-left: 10px;">Course</td>		
-				    <td style="padding-right: 120px; font-size: 20px; padding-left: 10px;">Date</td>
+				    <td style="width:100%;padding-bottom: 10px; padding-left: 10px; font-size: 15px; height:60px;">Description</td>
+				    <td style="padding-right: 50px; font-size: 15px; padding-left: 10px;">Course</td>		
+				    <td style="padding-right: 120px; font-size: 15px; padding-left: 10px;">Date</td>
 				  </tr>
-				  foreach()
-				  {}
-				  <tr>
-				    <td style="padding-left: 10px;"><?php viewDescription();?></td>
-				    <td style="padding-left: 10px;"><?php viewCoursename();?></td>		
-				    <td style="padding-left: 10px;"><?php viewDate();?></td>
-				  </tr>
+				  <?php 
+                  $id = $_SESSION['user'];
+				  viewAnnouncement($id)?>		
 				</table>
 			</div>
 		</div>
