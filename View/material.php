@@ -52,6 +52,7 @@ function save() {
           include 'connection.php';
          
           $course_code = 1;//$_SESSION['course_id']];
+          $as_id = 0;//$_SESSION['as_id']];
           $mat_type = 'Sheets';//$_SESSION['mat_type']];
           $mat_year = 2015;//$_SESSION['mat_year']];
 
@@ -76,12 +77,16 @@ function save() {
       
           ?>
       </ul><br>
-
-      <form>
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add New Material</button>
-      </form>
-
-    
+      <?php
+          $check="SELECT * FROM access WHERE course_code='$course_code' AND as_id='$as_id'";
+          $checkResult =$conn->query($check);?>
+          <?php if($checkResult->num_rows>0)
+            echo '<form>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                  Add New Material
+                  </button></form>';
+          ?>
+            
     </div>
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog" >
@@ -112,6 +117,7 @@ function save() {
           </div>  
            
         </div>
+        <?endif?>
    
     <div class="col-sm-9">
       
