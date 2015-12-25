@@ -4,7 +4,7 @@
 	<title>Document</title>
 </head>
 <body>
-	<form action="sub.php">
+	<form action="sub.php"> 
   DepName: <br>
   <input type="text" name="depname" >
   <br>

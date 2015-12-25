@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `academic_staff` (
 --
 
 CREATE TABLE IF NOT EXISTS `access` (
-  `mat_id` int(20) NOT NULL DEFAULT '0',
+  `mat_id` int(20) NOT NULL ,
   `as_id` int(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`mat_id`,`as_id`),
   KEY `fk_dep2` (`as_id`)
@@ -124,8 +124,9 @@ CREATE TABLE IF NOT EXISTS `graduation_project` (
 --
 
 CREATE TABLE IF NOT EXISTS `material` (
-  `mat_id` int(20) NOT NULL DEFAULT '0',
+  `mat_id` int(20) NOT NULL AUTO_INCREMENT,
   `mat_name` varchar(20) NOT NULL,
+  `mat_content` varchar(max) NOT NULL,
   `mat_type` varchar(10) DEFAULT NULL,
   `mat_size` int(10) DEFAULT NULL,
   `mat_year` int(4) DEFAULT NULL,
