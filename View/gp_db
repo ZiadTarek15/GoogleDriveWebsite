@@ -1,12 +1,18 @@
 <?php 
 include 'connection.php';
-$projectName = $_GET['projname'];
+$course_code = $_GET['course_code'];
 $year = $_GET['year'];
-$description = $_GET['description'];
+$description = $_GET['project_description'];
 $doctor = $_GET['doctor'];
-$teammemers = $_GET['names'];
-$membersnos = $_GET['nos'];
-$membersmails = $_GET['emails'];
+$teacher_ass = $_GET['teacher_ass'];
+$mebersnames = $_GET['mem_name'];
+$sponsor = $_GET['sponsor'];
+$membersnos = $_GET['mobile_no'];
+$membersmails = $_GET['email'];
 connect();
-insert($projname, $year,$description,$doctor,$names,$nos,$emails);
+insert into graduation_project(doctor , teacher_ass , sponsor , course_code , project_description) 
+ values ($doctor,$teacher_ass, $sponsor , $course_code , $description );
+insert into team_member(mobile_no , mem_name , email ) 
+ values ($membersnos , $membersnames , $membersmails);
+
 ?>

@@ -3,30 +3,38 @@
 	<meta charset="UTF-8">
 	<title>Grad_Projects</title>
 </head>
+<form action="demo_form.asp" method="get">
 <body>
 	<form action="gp.php">
-  ProjectName: <br>
-  <input type="text" name="projname" >
+  CourseCode: <br>
+  <input type="text" name="course_code" >
   <br>
   Year:<br>
   <input type="text" name="year" >
   <br>
   Description:<br>
-  <input type="text" name="description" >
+  <input type="text" name="project_description" >
   <br>
   Doctor: <br>
   <input type="text" name="doctor" >
   <br>
+  Teacher_ass: <br>
+  <input type="text" name="teacher_ass" >
+  <br>
+  Sponsor: <br>
+  <input type="text" name="sponsor" >
+  <br>
   TeamMembers:<br>
-  <input type="text" name="names" >
+  <input type="text" name="mem_name" >
   <br>
   Membersnos:<br>
-  <input type="text" name="nos" >
+  <input type="text" name="mobile_no" >
   <br>
   Membersmails:<br>
-  <input type="text" name="emails" >
+  <input type="text" name="email" >
   <br><br>
+  <input type="submit" value="Submit">
 
 </form>
 </body>
-</html>
+</html>s
