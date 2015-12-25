@@ -236,13 +236,15 @@
 				<table>
 				  <tr id="firstROW" style="border-bottom: 1px solid #bdbdbd;">
 				    <td style="width:100%;padding-bottom: 10px; padding-left: 10px; font-size: 20px;">Description</td>
-				    <td style="padding-right: 50px; font-size: 20px;">Course</td>		
-				    <td style="padding-right: 120px; font-size: 20px;">Date</td>
+				    <td style="padding-right: 50px; font-size: 20px; padding-left: 10px;">Course</td>		
+				    <td style="padding-right: 120px; font-size: 20px; padding-left: 10px;">Date</td>
 				  </tr>
+				  foreach()
+				  {}
 				  <tr>
 				    <td style="padding-left: 10px;"><?php viewDescription();?></td>
-				    <td>Jackson</td>		
-				    <td>94</td>
+				    <td style="padding-left: 10px;"><?php viewCoursename();?></td>		
+				    <td style="padding-left: 10px;"><?php viewDate();?></td>
 				  </tr>
 				</table>
 			</div>

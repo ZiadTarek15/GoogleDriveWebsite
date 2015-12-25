@@ -30,26 +30,29 @@ function viewDescription()
 	    }
 
 	}
-// function viewCoursename()
-// 	{
-// 		$query = "SELECT announcement.course_code FROM announcement INNER JOIN follow 
-// 					ON announcement.course_code = follow.course_code AND follow.as_id = 1100556";
-// 	    $result = $GLOBALS['conn']->query($query);
-// 	    if($result->num_rows>0)
-// 	    {
-// 	    	$description = $result->fetch_assoc();
-// 	    	echo $description["description"];
-// 	    }
-// 	}
+function viewCoursename()
+	{
+		$query = "SELECT course.course_name FROM course, announcement INNER JOIN follow 
+					ON announcement.course_code = follow.course_code AND follow.as_id = 1100556";
+	    $result = $GLOBALS['conn']->query($query);
+	    if($result->num_rows>0)
+	    {
+	    	$course = $result->fetch_assoc();
+	    	echo $course["course_name"];
+	    }
+	}
+function viewDate() {
+	$query = "SELECT announcement.date FROM announcement INNER JOIN follow 
+					ON announcement.course_code = follow.course_code AND follow.as_id = 1100556";
+	    $result = $GLOBALS['conn']->query($query);
+	    if($result->num_rows>0)
+	    {
+	    	$date = $result->fetch_assoc();
+	    	echo $date["date"];
+	    }
+}
 function viewUsername($id)
 	{
-<<<<<<< HEAD
-=======
-		
-	}	
-function viewUsername($id)
-	{
->>>>>>> 1846ad6a798e7f2691293d8b1e18bfc2824a579b
 		$query = "SELECT fst_name FROM academic_staff WHERE as_id = $id";
 	    $result = $GLOBALS['conn']->query($query);
 	    if($result!=null)
