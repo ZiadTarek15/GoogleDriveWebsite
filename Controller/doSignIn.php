@@ -12,6 +12,7 @@ if($GLOBALS['conn']->query($query)!=false)
 	{
 		$_SESSION['user'] = $row['as_id'];
 		echo "Signed in successfully";
+		header('Location: ../View/Home.php');
 	}
 	else{
 		echo "Wrong Email or Password";
