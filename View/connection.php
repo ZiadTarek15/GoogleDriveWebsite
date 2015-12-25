@@ -30,13 +30,19 @@ function viewDescription()
 	    }
 
 	}
-function viewCoursename()
+// function viewCoursename()
+// 	{
+// 		$query = "SELECT announcement.course_code FROM announcement INNER JOIN follow 
+// 					ON announcement.course_code = follow.course_code AND follow.as_id = 1100556";
+// 	    $result = $GLOBALS['conn']->query($query);
+// 	    if($result->num_rows>0)
+// 	    {
+// 	    	$description = $result->fetch_assoc();
+// 	    	echo $description["description"];
+// 	    }
+// 	}
+function viewUsername($id)
 	{
-		
-	}	
-function viewUsername()
-	{
-		$id = $_SESSION['user'];
 		$query = "SELECT fst_name FROM academic_staff WHERE as_id = $id";
 	    $result = $GLOBALS['conn']->query($query);
 	    if($result->num_rows>0)
