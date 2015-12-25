@@ -1,0 +1,174 @@
+body{
+	background-image: url("../images/Website-Design-Background.png");
+	background-size: cover;
+	background-position: bottom;
+}
+
+body.modal-open {
+ 		 overflow: inherit;
+  		 padding-right: 0 !important;
+		}
+		.input-form{
+			font-size: 20px !important;
+			display: block;
+			width: 40% !important;
+			margin-left: 25px !important;
+		}
+		#submit{
+			margin-right:25px;
+			background: green;
+		}
+		#submit-signin{
+			margin-right:25px;
+			background: green;
+		}
+		#cancel{
+			background: red;
+		}
+		#signup{
+			display: inline;
+		}
+		#signup-signin{
+			display: inline;
+		}
+		#right{
+			width: 35%;
+			background: #3b5998;
+			display: inline;
+			position: absolute;
+			left: 60%;
+			bottom: 60%;
+		}
+		#right-signin{
+			width: 35%;
+			background: #3b5998;
+			display: inline;
+			position: absolute;
+			left: 60%;
+			bottom: 50%;
+		}
+		#right-1{
+			width: 35%;
+			background: #DD4b39;
+			display: inline;
+			position: absolute;
+			left: 60%;
+			bottom: 25%;
+		}
+		#right-1-signin{
+			width: 35%;
+			background: #DD4b39;
+			display: inline;
+			position: absolute;
+			left: 60%;
+			bottom: 15%;
+		}
+		#left{
+			display: inline;
+		}
+		#center{
+			display: inline;
+			position: absolute;
+			left: 48%;
+			bottom: 40%;
+		}
+		#danger{
+			background-color: #c9302c;
+		}
+		#label-username{
+			background-image: url("https://codyhouse.co/demo/login-signup-modal-window/img/cd-icon-username.svg");
+			background-repeat: no-repeat;    
+    		height: 100px;
+    		width: 100%; /* may not be necessary */
+    		position: absolute;
+    		top: 19px;
+    		width: 30px;
+		}
+		#label-email{
+			background-image: url("https://codyhouse.co/demo/login-signup-modal-window/img/cd-icon-email.svg");
+			background-repeat: no-repeat;    
+    		height: 100px;
+    		width: 100%; /* may not be necessary */
+    		position: absolute;
+    		top: 65px;
+    		width: 30px;
+		}
+		#label-password{
+			background-image: url("https://codyhouse.co/demo/login-signup-modal-window/img/cd-icon-password.svg");
+			background-repeat: no-repeat;    
+    		height: 100px;
+    		width: 100%; /* may not be necessary */
+    		position: absolute;
+    		top: 113px;
+    		width: 30px;
+		}
+		#label-password-signin{
+			background-image: url("https://codyhouse.co/demo/login-signup-modal-window/img/cd-icon-password.svg");
+			background-repeat: no-repeat;    
+    		height: 100px;
+    		width: 100%; /* may not be necessary */
+    		position: absolute;
+    		top: 66px;
+    		width: 30px;
+		}
+		#label-password-con{
+			background-image: url("https://codyhouse.co/demo/login-signup-modal-window/img/cd-icon-password.svg");
+			background-repeat: no-repeat;    
+    		height: 100px;
+    		width: 100%; /* may not be necessary */
+    		position: absolute;
+    		top: 160px;
+    		width: 30px;
+		}
+
+		.modal-dialog{
+			width: 100%;
+			padding-left: 20px;
+		}
+		.modal{
+			width: 60%;
+			background: rgba(0,0,0,0);
+			box-shadow: 0 0 0 0;
+		}
+		input{
+			margin-bottom: 0px!important;
+		}
+		.head{
+			color:white;
+			text-align: center;
+			text-shadow: 2px 2px black;
+		}
+		.btnn{
+			position: absolute;
+			left: 42%;
+		}
+		#link{
+			position: absolute;
+			left: 41%;
+			top: 85%;
+			color: #33331a !important;
+		}
+
+		.btnn {
+			  background: #828a8f;
+			  background-image: -webkit-linear-gradient(top, #828a8f, #adb1b3);
+			  background-image: -moz-linear-gradient(top, #828a8f, #adb1b3);
+			  background-image: -ms-linear-gradient(top, #828a8f, #adb1b3);
+			  background-image: -o-linear-gradient(top, #828a8f, #adb1b3);
+			  background-image: linear-gradient(to bottom, #828a8f, #adb1b3);
+			  font-family: Georgia;
+			  color: #ffffff;
+			  font-size: 35px;
+			  padding: 10px 20px 10px 20px;
+			  text-decoration: none;
+			}
+
+		.btnn:hover {
+		  background: #aaacad;
+		  background-image: -webkit-linear-gradient(top, #aaacad, #979899);
+		  background-image: -moz-linear-gradient(top, #aaacad, #979899);
+		  background-image: -ms-linear-gradient(top, #aaacad, #979899);
+		  background-image: -o-linear-gradient(top, #aaacad, #979899);
+		  background-image: linear-gradient(to bottom, #aaacad, #979899);
+		  text-decoration: none;
+		}
