@@ -7,7 +7,7 @@ function connect()
 	    die("Connection failed: " . $GLOBALS['conn']->connect_error);
 		} 
 	}
-<<<<<<< HEAD
+
 function insert($id, $name, $year, $class)
 	{
 		$sql = "INSERT INTO `drive_db`.`department` (`dep_id`, `dep_name`, `year`, `class`) VALUES ('$id', '$name', '$year', '$class')"; 
@@ -51,6 +51,4 @@ function viewUsername($id)
 	    	echo $username["fst_name"];
 	    }
 	}
-=======
->>>>>>> ba0d9cdc1995817dd58817fef8a1e87385d8b8f6
 ?>
