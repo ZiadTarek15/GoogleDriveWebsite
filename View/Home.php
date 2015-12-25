@@ -87,116 +87,116 @@
 				Preparatory</a>
 		</div>
 		<div class="dropdown" id = "ONE" style="box-shadow: 0px 0.2px 0.5px #888888;">
-			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="dep.php?department_id='1'">
+			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
 				<img alt="Brand" src="../images/folder.png" width="20" height="20" id="logo" style="margin-top: -10px;">
 				First</a>
 			<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-				<li><a href="#">Electrical</a></li>	
+				<li><a href="dep.php?department_id='10'">Electrical</a></li>	
 				<li class="divider"></li>	
-				<li><a href="#">Civil</a></li>
+				<li><a href="dep.php?department_id='11'">Civil</a></li>
 				<li class="divider"></li>
-				<li><a href="#">Architectural</a></li>
+				<li><a href="dep.php?department_id='12'">Architectural</a></li>
 				<li class="divider"></li>		
-				<li><a href="#">Mechanical</a></li>
+				<li><a href="dep.php?department_id='13'">Mechanical</a></li>
 			</ul>
 		</div>
 		<div class="dropdown" id = "TWO" style="box-shadow: 0px 0.2px 0.5px #888888;">
-			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="dep.php?department_id='2'">
+			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
 				<img alt="Brand" src="../images/folder.png" width="20" height="20" id="logo" style="margin-top: -10px;">
 				Second</a>
 			<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-				<li><a href="#">Electrical</a></li>
+				<li><a href="dep.php?department_id='20'">Electrical</a></li>
 				<li class="divider"></li>		
-				<li><a href="#">Civil</a></li>
+				<li><a href="dep.php?department_id='21'">Civil</a></li>
 				<li class="divider"></li>
-				<li><a href="#">Architectural</a></li>
+				<li><a href="dep.php?department_id='22'">Architectural</a></li>
 				<li class="divider"></li>		
-				<li><a href="#">Mechanical</a></li>
+				<li><a href="dep.php?department_id='23'">Mechanical</a></li>
 			</ul>
 		</div>
 		<div class="dropdown" id = "THREE" style="box-shadow: 0px 0.2px 0.5px #888888;">
-			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="dep.php?department_id='3'">
+			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
 				<img alt="Brand" src="../images/folder.png" width="20" height="20" id="logo" style="margin-top: -10px;">
 				Third</a>
 			<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
 				<li class="dropdown-submenu">
 					<a tabindex="-1" href="#">Electrical</a>
 					<ul class="dropdown-menu">
-	                  <li><a tabindex="-1" href="#">CSE</a></li>
+	                  <li><a tabindex="-1" href="dep.php?department_id='300'">CSE</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Communication</a></li>
+	                  <li><a href="dep.php?department_id='301'">Communication</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Power</a></li>
+	                  <li><a href="dep.php?department_id='302'">Power</a></li>
                 	</ul>
 				</li>
 				<li class="divider"></li>		
-				<li><a href="#">Civil</a></li>
+				<li><a href="dep.php?department_id='31'">Civil</a></li>
 				<li class="divider"></li>
 				<li class="dropdown-submenu">
 					<a tabindex="-1" href="#">Architectural</a>
 					<ul class="dropdown-menu">
-	                  <li><a tabindex="-1" href="#">Design</a></li>
+	                  <li><a tabindex="-1" href="dep.php?department_id='320'">Design</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Urban</a></li>
+	                  <li><a href="dep.php?department_id='321'">Urban</a></li>
                 	</ul>
 				</li>
 				<li class="divider"></li>
 				<li class="dropdown-submenu">
 					<a tabindex="-1" href="#">Mechanical</a>
 					<ul class="dropdown-menu">
-	                  <li><a tabindex="-1" href="#">Power</a></li>
+	                  <li><a tabindex="-1" href="dep.php?department_id='330'">Power</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Mechatronics</a></li>
+	                  <li><a href="dep.php?department_id='331'">Mechatronics</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Production</a></li>
+	                  <li><a href="dep.php?department_id='332'">Production</a></li>
                 	</ul>
 				</li>
 			</ul>
 		</div>
 		<div class="dropdown" id = "FOUR" style="box-shadow: 0px 0.2px 0.5px #888888;">
-			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="dep.php?department_id='4'">
+			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
 				<img alt="Brand" src="../images/folder.png" width="20" height="20" id="logo" style="margin-top: -10px;">
 				Fourth</a>
 			<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
 				<li class="dropdown-submenu">
 					<a tabindex="-1" href="#">Electrical</a>
 					<ul class="dropdown-menu">
-	                  <li><a tabindex="-1" href="#">CSE</a></li>
+	                  <li><a tabindex="-1" href="dep.php?department_id='400'">CSE</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Communication</a></li>
+	                  <li><a href="dep.php?department_id='401'">Communication</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Power</a></li>
+	                  <li><a href="dep.php?department_id='402'">Power</a></li>
                 	</ul>
 				</li>
 				<li class="divider"></li>		
 				<li class="dropdown-submenu">
 					<a tabindex="-1" href="#">Civil</a>
 					<ul class="dropdown-menu">
-	                  <li><a tabindex="-1" href="#">Structural</a></li>
+	                  <li><a tabindex="-1" href="dep.php?department_id='410'">Structural</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Public Works</a></li>
+	                  <li><a href="dep.php?department_id='411'">Public Works</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Irrigation</a></li>
+	                  <li><a href="dep.php?department_id='412'">Irrigation</a></li>
                 	</ul>
 				</li>
 				<li class="divider"></li>
 				<li class="dropdown-submenu">
 					<a tabindex="-1" href="#">Architectural</a>
 					<ul class="dropdown-menu">
-	                  <li><a tabindex="-1" href="#">Architecture</a></li>
+	                  <li><a tabindex="-1" href="dep.php?department_id='420'">Design</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Urban</a></li>
+	                  <li><a href="dep.php?department_id='421'">Urban</a></li>
                 	</ul>
 				</li>
 				<li class="divider"></li>
 				<li class="dropdown-submenu">
 					<a tabindex="-1" href="#">Mechanical</a>
 					<ul class="dropdown-menu">
-	                  <li><a tabindex="-1" href="#">Power</a></li>
+	                  <li><a tabindex="-1" href="dep.php?department_id='430'">Power</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Mechatronics</a></li>
+	                  <li><a href="dep.php?department_id='431'">Mechatronics</a></li>
 	                  <li class="divider"></li>
-	                  <li><a href="#">Production</a></li>
+	                  <li><a href="dep.php?department_id='432'">Production</a></li>
                 	</ul>
 				</li>
 			</ul>
