@@ -25,6 +25,11 @@
     font-family: 'Handlee', cursive;
     color: #696969;
    }
+   .navbar {
+    border-radius: 0px;
+    margin-right: -89px;
+    margin-left: -90px;
+   }
 
 </style>
 
