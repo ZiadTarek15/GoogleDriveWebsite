@@ -11,13 +11,12 @@
 		height: 547px;
 		background-color: #ededed;
 		float: left;
-		padding-top: -10px;
 		box-shadow: 0.5px 0px 1px #888888;
 		margin-top: 78px;
 		
 	}
 	#left #categorize {
-		margin-top: 100px;
+		margin-top: 70px;
 	}
 	#left .dropdown a{
 		color: #696969;
