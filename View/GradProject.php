@@ -3,7 +3,7 @@
 	<meta charset="UTF-8">
 	<title>Grad_Projects</title>
 </head>
-<form action="demo_form.asp" method="get">
+<form method="GET" action="../Controller/viewproject.php">
 <body>
 	<form action="gp.php">
   CourseCode: <br>
@@ -33,7 +33,7 @@
   Membersmails:<br>
   <input type="text" name="email" >
   <br><br>
-  <input type="submit" value="Submit">
+  <button type="submit">Submit</button>
 
 </form>
 </body>
