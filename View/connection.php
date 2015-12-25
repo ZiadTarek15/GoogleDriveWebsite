@@ -34,12 +34,11 @@ function viewCoursename()
 	{
 		
 	}	
-function viewUsername()
+function viewUsername($id)
 	{
-		$id = $_SESSION['user'];
 		$query = "SELECT fst_name FROM academic_staff WHERE as_id = $id";
 	    $result = $GLOBALS['conn']->query($query);
-	    if($result->num_rows>0)
+	    if($result!=null)
 	    {
 	    	$username = $result->fetch_assoc();
 	    	echo $username["fst_name"];
