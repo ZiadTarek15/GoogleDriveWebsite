@@ -57,13 +57,12 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
                     aria-haspopup="true" aria-expanded="false">
                   <?php 
-                  include 'connection.php';
+                  include('connection.php');
                   viewUsername();
                   ?>
-
                 </a>
-                <ul class="dropdown-menu" style="background-color: orange;">
-                 <h1>hello</h1> 
+                <ul class="dropdown-menu">
+                 <li>Sign Out</li> 
                 </ul>
               </li>
             </ul>

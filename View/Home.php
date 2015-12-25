@@ -54,12 +54,10 @@
 	}
 	#left .dropdown a:hover {background-color: #bdbdbd; border-radius: 0px;}
 
-	#right #rightbar{
+	#firstROW{
 		background-color:#f6f6f6; 
-		padding:15px;
-		box-shadow: 0px 0.5px 1px #888888;
-		margin-bottom: 3px;
 		margin-left: 250px;
+		
 	}
 	#right #ann {
 		background-color:#f6f6f6; 
@@ -229,28 +227,25 @@
 			        </a>
 		      	</li>
 		        <li style="text-align: left;margin-left: -230px;"><h4>Drive</h4></li>
-		        <li style="margin-left: 230px;"><strong>ANNOUNCEMENTS</strong></li>
+		        <li style="margin-left: 135px;font-size: 20px;">ANNOUNCEMENTS</li>
         	</ul>
 			</div>
 		</div>
 		<div id="rightbar">
-			<ul class="list-inline">
-				<li>Name</li>
-				<li style="margin-right: 100px; margin-left: 100px; float: right;">Last Modified</li>
-				<li style="margin-right: 50px;float: right;">Owner</li>
-			</ul>
-		</div>
-		<div id="rightcontent">
-			<?php 
-				viewAnnouncement();
-			?>
+			<div id="rightcontent">
+				<table>
+				  <tr id="firstROW" style="border-bottom: 1px solid #bdbdbd;">
+				    <td style="width:100%;padding-bottom: 10px; padding-left: 10px; font-size: 20px;">Description</td>
+				    <td style="padding-right: 50px; font-size: 20px;">Course</td>		
+				    <td style="padding-right: 120px; font-size: 20px;">Date</td>
+				  </tr>
+				  <tr>
+				    <td style="padding-left: 10px;"><?php viewDescription();?></td>
+				    <td>Jackson</td>		
+				    <td>94</td>
+				  </tr>
+				</table>
+			</div>
 		</div>
 	</div>
 </div>
-
-<script>
-prompt("HI");
-	$('#left button').click(function() {
-		$("#THREE").css("margin-top", 1000);
-	}
-</script>
