@@ -10,9 +10,24 @@ $sponsor = $_GET['sponsor'];
 $membersnos = $_GET['mobile_no'];
 $membersmails = $_GET['email'];
 connect();
-insert into graduation_project(doctor , teacher_ass , sponsor , course_code , project_description) 
- values ($doctor,$teacher_ass, $sponsor , $course_code , $description );
-insert into team_member(mobile_no , mem_name , email ) 
- values ($membersnos , $membersnames , $membersmails);
+
+$query = "INSERT INTO team_member(mobile_no , mem_name , email ) 
+ values ($membersnos , $membersnames , $membersmails)";
+if($GLOBALS['conn']->query($query)===TRUE)
+{
+echo "New Record Added";
+}else{
+echo "ERROR ".$GLOBALS['conn']->error;
+}
+;
+$query = "INSERT INTO graduation_project(doctor , teacher_ass , sponsor , course_code , project_description) 
+ values ($doctor,$teacher_ass, $sponsor , $course_code , $description )";
+if($GLOBALS['conn']->query($query)===TRUE)
+{
+echo "New Record Added";
+}else{
+echo "ERROR ".$GLOBALS['conn']->error;
+}
+;
 
 ?>
