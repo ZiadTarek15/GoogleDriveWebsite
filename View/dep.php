@@ -1,12 +1,16 @@
 <?php
 include '../Controller/dep_controller.php';
-$data = get_dep();
+session_start();
+// $temp = $_SESSION['department_id']
+$temp = '15';
+$data = get_dep($temp);
+$dep_id = $data[0];
 $dep_name = $data[1];
 $dep_year = $data[2];
 $dep_class = $data[3];
 //kol entries al courses fe array wa7da, al course code w wrah al course name t7t hna v 
-$courses_data = get_courses();
-$dep_years = get_years();
+$courses_data = get_courses($temp);
+$dep_years = get_years($dep_name);
 ?>
 <html lang="en">
 <style type="text/css">
