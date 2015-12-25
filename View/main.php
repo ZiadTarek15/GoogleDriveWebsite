@@ -57,10 +57,18 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
                     aria-haspopup="true" aria-expanded="false">
                   <?php 
+<<<<<<< HEAD
                    include 'connection.php';
                   // $id = $_SESSION['user'];
                   // viewUsername($id);
                   // ?>
+=======
+                  session_start();
+                  include('connection.php');
+                  $id = $_SESSION['user'];
+                  viewUsername($id);
+                  ?>
+>>>>>>> 1846ad6a798e7f2691293d8b1e18bfc2824a579b
                 </a>
                 <ul class="dropdown-menu">
                  <li>Sign Out</li> 

@@ -43,9 +43,16 @@ function viewDescription()
 // 	}
 function viewUsername($id)
 	{
+<<<<<<< HEAD
+=======
+		
+	}	
+function viewUsername($id)
+	{
+>>>>>>> 1846ad6a798e7f2691293d8b1e18bfc2824a579b
 		$query = "SELECT fst_name FROM academic_staff WHERE as_id = $id";
 	    $result = $GLOBALS['conn']->query($query);
-	    if($result->num_rows>0)
+	    if($result!=null)
 	    {
 	    	$username = $result->fetch_assoc();
 	    	echo $username["fst_name"];
