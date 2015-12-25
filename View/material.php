@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html !DOCTYPE html>
 <html lang="en">
 <head>
   <title>Bootstrap Example</title>
@@ -33,13 +33,20 @@
       .row.content {height: auto;} 
     }
   </style>
+  <script type="text/javascript">
+<!--
+function save() {
+
+}
+//-->
+</script>
 </head>
 <body>
 
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav">
-      <h4>John's Blog</h4>
+      <h4>Materials</h4>
       <ul class="nav nav-pills nav-stacked">
         <?php
           include 'connection.php';
@@ -61,18 +68,56 @@
                  
                 }
           }
+          else
+          {
+
+            $name="No Sheets";
+          }
       
           ?>
       </ul><br>
 
+      <form>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add New Material</button>
+      </form>
 
     
     </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog" >
+        
+          <div class="modal-dialog">
 
+             <!-- Modal content-->
+                 <div class="modal-content">
+                   <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">New Material</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form method="post" action="../Controller/Material.php">
+                          Material Name: <br>
+                          <input type="text" name="matname" ><br>
+
+                           Material Content:<br>
+                           <TEXTAREA NAME="matContent" ROWS=9 COLS=70 ></TEXTAREA> <br>
+                    
+                   
+                        <button type="submit" class="btn btn-default" >Save</button>
+        
+                      </form>
+                  </div>
+                  </div>
+
+          </div>  
+           
+        </div>
+   
     <div class="col-sm-9">
       
       <?php
-        if($name==true){
+        if($name==true)
+        {
           echo"<h4><small>".$name."</small></h4>";
             $sql1 = "SELECT mat_content 
                   FROM material 

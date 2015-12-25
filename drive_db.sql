@@ -42,9 +42,9 @@ CREATE TABLE IF NOT EXISTS `academic_staff` (
 --
 
 CREATE TABLE IF NOT EXISTS `access` (
-  `mat_id` int(20) NOT NULL ,
+  `course_code` int(20) NOT NULL ,
   `as_id` int(20) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`mat_id`,`as_id`),
+  PRIMARY KEY (`course_code`,`as_id`),
   KEY `fk_dep2` (`as_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -126,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `graduation_project` (
 CREATE TABLE IF NOT EXISTS `material` (
   `mat_id` int(20) NOT NULL AUTO_INCREMENT,
   `mat_name` varchar(20) NOT NULL,
-  `mat_content` varchar(max) NOT NULL,
+  `mat_content` varchar(2000) NOT NULL,
   `mat_type` varchar(10) DEFAULT NULL,
   `mat_size` int(10) DEFAULT NULL,
   `mat_year` int(4) DEFAULT NULL,
@@ -186,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `view` (
 -- Constraints for table `access`
 --
 ALTER TABLE `access`
-  ADD CONSTRAINT `fk_dep` FOREIGN KEY (`mat_id`) REFERENCES `material` (`mat_id`),
+  ADD CONSTRAINT `fk_dep` FOREIGN KEY (`course_code`) REFERENCES `course` (`course_code`),
   ADD CONSTRAINT `fk_dep2` FOREIGN KEY (`as_id`) REFERENCES `academic_staff` (`as_id`);
 
 --

@@ -5,20 +5,19 @@ session_start();
 $course_code = 1;//$_SESSION['course_id']];
 $mat_type = 'Sheets';//$_SESSION['mat_type']];
 $mat_year = 2015;//$_SESSION['mat_year']];
+$mat_content=$_POST['matContent'];
+$matname=$_POST['matname'];
 
-$sql = "SELECT mat_name,mat_content 
-		  FROM material 
-		  WHERE mat_type='$mat_type' AND course_code= '$course_code' AND mat_year='$mat_year'";	
-$result = $conn->query($sql);		  	  
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-    	echo $row['mat_name'];
-    	echo"</td><td>";
-    	echo $row['mat_content'];
-    	echo"</td><td>";
-    	echo"<br>";
- 		  }
+$sql = "INSERT INTO `drive_db`.`material` (`mat_name`,`mat_content`,`mat_type`,`mat_year`,`course_code`)  
+VALUES ('$matname','$mat_content','$mat_type','$mat_year','$course_code')"; 
+
+if ($GLOBALS['conn']->query($sql) === TRUE) {
+    echo "New record created successfully";
+} 
+else 
+{
+    echo "Error: " . $sql . "<br>" . $GLOBALS['conn']->error;
 }
+				  
 
 ?>
