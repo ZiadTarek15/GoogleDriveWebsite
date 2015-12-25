@@ -4,7 +4,7 @@ $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-$passwordconfirmation = $_POST['passwordconfirmation'];
+
 
 $query = "INSERT INTO `drive_db`.`academic_staff`(`fst_name`,`lst_name`,`as_email`,`as_pass`) 
 					  VALUES ('$fname','$lname','$email','$password')";

@@ -1,8 +1,8 @@
 <?php
 include '../View/connection.php';
 session_start();
-$email = $_POST['email'];
-$password = $_POST['password'];
+$email = $_POST['email-signin'];
+$password = $_POST['password-signin'];
 
 $query = "SELECT * FROM academic_staff WHERE as_email = '$email'";
 if($GLOBALS['conn']->query($query)!=false)
