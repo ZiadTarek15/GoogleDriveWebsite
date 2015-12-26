@@ -3,7 +3,7 @@
 	<meta charset="UTF-8">
 	<title>Grad_Projects</title>
 </head>
-<form method="GET" action="../Controller/viewproject.php">
+<form method="GET" action="../Controller/view_project.php">
 <body>
 	<form action="gp.php">
   CourseCode: <br>

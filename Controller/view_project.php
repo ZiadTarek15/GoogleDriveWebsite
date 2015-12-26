@@ -23,7 +23,7 @@
 
  if($GLOBALS['conn']->query($query)!=false)
  {
- 	 return $data;
+ 	 echo $data;
  }
  else
  {

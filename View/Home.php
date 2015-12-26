@@ -139,7 +139,7 @@
 				<li class="dropdown-submenu">
 					<a tabindex="-1" href="#">Electrical</a>
 					<ul class="dropdown-menu">
-	                  <li><a tabindex="-1" href="dep.php?department_id='300'">CSE</a></li>
+	                  <li><a tabindex="-1" href="dep.php?department_id=300">CSE</a></li>
 	                  <li class="divider"></li>
 	                  <li><a href="dep.php?department_id=301">Communication</a></li>
 	                  <li class="divider"></li>

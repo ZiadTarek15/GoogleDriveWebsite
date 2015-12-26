@@ -28,14 +28,16 @@ function viewAnnouncement($id)
 	    $x = "SELECT course.course_name FROM course INNER JOIN follow ON course.course_code = follow.course_code
 	     WHERE follow.as_id = $id";
 	    $result2 = $GLOBALS['conn']->query($x);
-	    $course = $result2->fetch_assoc();
+	    
 	    if($result->num_rows>0)
 	    {
 	    	while($Des = $result->fetch_assoc())
 	    	{
 	    		echo"<tr>";
 	    		echo "<td>$Des[description]</td>";
-	    		echo "<td>$course[course_name]</td>";
+	    		if($course = $result2->fetch_assoc())
+	    		{echo "<td>$course[course_name]</td>";
+	    		}
 	    		echo "<td>$Des[date]</td>";
 	    		echo"</tr>";
 	    	}

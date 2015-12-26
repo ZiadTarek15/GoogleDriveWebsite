@@ -10,7 +10,7 @@ $dep_year = $data[2];
 $dep_class = $data[3];
 //kol entries al courses fe array wa7da, al course code w wrah al course name t7t hna v 
 $courses_data = get_courses($department_id);
-$dep_years = get_years($dep_name);
+$dep_years = get_years($dep_name,$dep_class);
 ?>
 <html lang="en">
 <style type="text/css">
@@ -263,7 +263,7 @@ $dep_years = get_years($dep_name);
             <div role="tabpanel" class="tab-pane" id="<?php echo $dep_years[$i]; ?>">
               <div class = "main">
                 <ul class = "FList">
-                  <p><?php $this_id = this_id($dep_years[$i],'4',"cse"); ?></p>
+                  <p><?php $this_id = this_id($dep_years[$i],$dep_class,$dep_name); ?></p>
                    <?php $year_courses = get_courses($this_id)?>
                    <?php for ($j=0; $j < count($year_courses); $j=$j+2) {  ?>
                     <li>
