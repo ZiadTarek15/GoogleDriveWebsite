@@ -1,15 +1,13 @@
 <?php
-include '../View/connection.php';
-session_start();
 
-$course_code = 1;//$_SESSION['course_id']];
-$mat_type = 'Sheets';//$_SESSION['mat_type']];
-$mat_year = 2015;//$_SESSION['mat_year']];
+require_once "../View/material.php";
+
 $mat_content=$_POST['matContent'];
 $matname=$_POST['matname'];
 
-$sql = "INSERT INTO `drive_db`.`material` (`mat_name`,`mat_content`,`mat_type`,`mat_year`,`course_code`)  
-VALUES ('$matname','$mat_content','$mat_type','$mat_year','$course_code')"; 
+//insert new material into db
+$sql = "INSERT INTO `drive_db`.`material` (`mat_name`,`mat_content`,`mat_type`,`course_code`)  
+VALUES ('$matname','$mat_content','$mat_type','$course_code')"; 
 
 if ($GLOBALS['conn']->query($sql) === TRUE) {
     echo "New record created successfully";
