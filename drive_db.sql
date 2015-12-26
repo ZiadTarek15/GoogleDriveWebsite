@@ -129,7 +129,6 @@ CREATE TABLE IF NOT EXISTS `material` (
   `mat_content` varchar(2000) NOT NULL,
   `mat_type` varchar(10) DEFAULT NULL,
   `mat_size` int(10) DEFAULT NULL,
-  `mat_year` int(4) DEFAULT NULL,
   `last_mod` varchar(15) DEFAULT NULL,
   `course_code` int(6) DEFAULT NULL,
   PRIMARY KEY (`mat_id`),

@@ -151,7 +151,7 @@
 
           //get them from pervious pages
           $course_code = 1;//$_SESSION['course_id']];
-          $as_id = 1;//$_SESSION['as_id']];
+          $as_id = 2;//$_SESSION['as_id']];
           $mat_type = 'Sheets';//$_SESSION['mat_type']];
           $mN=array();
           $mC=array();
@@ -311,6 +311,14 @@
               <div class = "main">
                 <ul class = "FList">
                   <p><?php echo $mC[$i] ?></p>
+                    <?php if($checkResult->num_rows>0) {
+                      //make the button appear if the user has access
+                         echo '<form>
+                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">
+                              Delete Material
+                              </button></form>';
+                   }?>
+    
                    </ul>
               </div>
             </div>
@@ -319,6 +327,32 @@
   </div> <!-- right !-->
 
 </div> <!-- body!-->
+
+    <!-- Modal related to the button (Add New Material) -->
+    <div id="myModal1" class="modal fade" role="dialog" >
+        
+          <div class="modal-dialog">
+
+             <!-- Modal content-->
+                 <div class="modal-content">
+                   <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <form method="post" action="../Controller/DeleteMaterial.php">
+                        <h4 class="modal-title">Delete Material</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Are You Sure you want to delete?></p>
+                      
+                   
+                        <button type="submit" class="btn btn-default" >Delete</button>
+        
+                      </form>
+                  </div>
+                  </div>
+
+          </div>  
+           
+        </div>          
 
 
 
