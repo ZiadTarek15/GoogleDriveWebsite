@@ -67,31 +67,25 @@ function unfollow( $as_id, $course_code){
 }
 
 function follow_check( $as_id, $course_code){
-        $sql_query = "SELECT `as_id` FROM `follow` WHERE `course_code`= '$course_code' ";
+        $sql_query = " SELECT * FROM `follow` WHERE `as_id` = '$as_id' AND `course_code` = '$course_code'  ";
         $res = $GLOBALS['conn']->query($sql_query);
-       if (!$res){
-            die('Error ' . mysql_error());
-            return False;
+        if (! ($res->num_rows >0)){
+            //die('Error ' . mysql_error());
+            return 0;
           }
         else{
-            while ($row = mysqli_fetch_assoc($res)) {
-		$data= $row["as_id"];
-                if ( $data == $as_id){
-                    return TRUE;
-                }
+             return TRUE;
+                
             }
 	}
-	return FALSE;
-	}
-        
-
-
+	
+//something not right with the check
 function access_check( $as_id, $course_code){
-        $sql_query = "SELECT `course_code` FROM `access` WHERE as_id = '$as_id' AND course_code = '$course_code' ";
+        $sql_query = "SELECT * FROM `access` WHERE `as_id` = '$as_id' AND `course_code` = '$course_code' ";
         $res = $GLOBALS['conn']->query($sql_query);
-       if (!$res){
-            die('Error ' . mysql_error());
-            return False;
+       if (! ($res->num_rows >0)){
+            //die('Error ' . mysql_error());
+            return 0;
           }
         else{
 	return TRUE;
