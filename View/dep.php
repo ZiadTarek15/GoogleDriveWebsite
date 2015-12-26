@@ -186,6 +186,12 @@ $dep_years = get_years($dep_name);
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
+<<<<<<< HEAD
+=======
+<h1>
+<?php echo $dep_name; ?>
+</h1>
+>>>>>>> addDep
 
 
 
