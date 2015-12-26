@@ -5,7 +5,6 @@ function get_dep($dep_id)
 {
 	$query  = "SELECT * FROM `department` WHERE `dep_id` = '$dep_id'";
     $data = mysqli_fetch_array($GLOBALS['conn']->query($query));
-
 	if ($GLOBALS['conn']->query($query) != false) {
     	return $data;
 		} 
@@ -36,12 +35,10 @@ function get_years($dep_name)
 	}
 	return $data;
 }
-
 function this_id($year, $class, $name)
 {
 	$query = "SELECT * FROM `department` WHERE year = '$year' and class = '$class' and dep_name = '$name' ";
 	$data = mysqli_fetch_array($GLOBALS['conn']->query($query));
-
 	if ($GLOBALS['conn']->query($query) != false) {
     	return $data[0];
 		} 
@@ -54,7 +51,6 @@ function course_id($name,$code)
 {
 	$query = "SELECT * FROM `department` WHERE name = '$name' and course_code = '$code'";
 	$data = mysqli_fetch_array($GLOBALS['conn']->query($query));
-
 	if ($GLOBALS['conn']->query($query) != false) {
     	return $data[0];
 		} 

@@ -20,7 +20,6 @@ $dep_years = get_years($dep_name);
     margin-left: -99px;
     font-family: 'Handlee', cursive;
    }
-
   .fa 
   {
     color: #6C7A89;
@@ -80,8 +79,6 @@ $dep_years = get_years($dep_name);
     top: -50px;
     width: 70%;
   }
-
-
   #body {
     margin-top:-20px;
     background-color: rbga(0,0,0,0);
@@ -160,14 +157,12 @@ $dep_years = get_years($dep_name);
     left: 270px;
     font-family: 'Handlee', cursive;
   }
-
-
 </style>
 
 
 <head>
-	<meta charset="UTF-8">
-	<title>Department courses </title>
+  <meta charset="UTF-8">
+  <title>Department courses </title>
 
    <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -186,12 +181,6 @@ $dep_years = get_years($dep_name);
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-<<<<<<< HEAD
-=======
-<h1>
-<?php echo $dep_name; ?>
-</h1>
->>>>>>> addDep
 
 
 

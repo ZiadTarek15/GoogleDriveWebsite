@@ -16,9 +16,15 @@
 		
 	}
 	#left #categorize {
-		margin-top: 70px;
+		margin-top: 40px;
 	}
-	#left .dropdown a{
+	#left #ADD {
+		margin-left: 50px;
+		margin-top: 30px;
+	}
+	#left #E3dady a:hover,#left #ONE a:hover, #left #TWO a:hover,#left #THREE a:hover
+	,#left #FOUR a:hover{background-color: #bdbdbd; border-radius: 0px;}
+	#left #E3dady a, #left #ONE a, #left #TWO a,#left #THREE a,#left #FOUR a{
 		color: #696969;
 		border: 0px; 
 		box-shadow: none;
@@ -52,8 +58,7 @@
 	#left .dropdown-submenu:hover>.dropdown-menu {
 	    display: block;
 	}
-	#left .dropdown a:hover {background-color: #bdbdbd; border-radius: 0px;}
-
+	
 	#firstROW{
 		background-color:#f6f6f6; 
 		margin-left: 250px;
@@ -79,9 +84,22 @@
 
 <div id="body">
 	<div id ="left">
+		<div class="dropdown" id ="ADD">
+			<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="#">
+				Add Department</a>
+			<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+			<form method="post" action="../Controller/add_dep.php">
+			  <input type ="text" name="ID" placeholder ="Department ID" required><br>
+			  <input type ="text" name="DN" placeholder ="Department Name" required><br>
+			  <input type ="text" name="DC" placeholder ="Class" required><br>
+			  <input type ="text" name="DY" placeholder ="Year" required><br>
+			  <button type="submit">Add</button>
+			 </form>
+			</ul>
+		</div>
 		<div id="categorize">
 		<div class="dropdown" id = "E3dady">
-          	<a id="dLabel" role="button" class="btn btn-primary" data-target="#" href="dep.php?department_id=0">
+          	<a id="dLabel" role="button"class="btn btn-primary" data-target="#" href="dep.php?department_id=0">
 				<img alt="Brand" src="../images/folder.png" width="20" height="20" id="logo" style="margin-top: -10px;">
 				Preparatory</a>
 		</div>
