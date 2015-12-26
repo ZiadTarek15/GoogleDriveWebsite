@@ -181,7 +181,6 @@ $dep_years = get_years($dep_name);
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-<<<<<<< HEAD
 
 
 
@@ -296,22 +295,6 @@ $dep_years = get_years($dep_name);
     <input type="text" name="CN" class="form-control" id="exampleInputEmail2" placeholder="course name">
   </div>
   <button type="submit" class="btn btn-default">Add</button>
-=======
-	<form action="sub.php"> 
-  DepName: <br>
-  <input type="text" name="depname" >
-  <br>
-  Year:<br>
-  <input type="text" name="year" >
-  <br>
-  Class: <br>
-  <input type="text" name="class" >
-  <br>
-  ID:<br>
-  <input type="text" name="id" >
-  <br><br>
-  <input type="submit" value="Submit">
->>>>>>> material
 </form>
 </div>
 </body>
