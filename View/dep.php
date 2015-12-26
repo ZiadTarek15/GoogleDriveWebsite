@@ -84,9 +84,7 @@ $dep_years = get_years($dep_name);
 </head>
 <body>
 <h1>
-<?php
-echo $dep_name;
-?>
+<?php echo $dep_name; ?>
 </h1>
 
 <div id="left" style="display:block;">
