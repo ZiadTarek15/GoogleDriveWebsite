@@ -9,7 +9,7 @@ $query = "INSERT INTO `drive_db`.`department`(`dep_id`,`dep_name`,`year`,`class`
 					  VALUES ('$dep_id','$dep_name','$year','$class')";
 if($GLOBALS['conn']->query($query)===TRUE)
 {
-	header('Location: ../View/dep.php');
+	header('Location: ../View/Home.php');
 }else{
 	echo "ERROR ".$GLOBALS['conn']->error;
 }
