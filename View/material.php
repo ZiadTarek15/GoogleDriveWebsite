@@ -151,7 +151,7 @@
 
           //get them from pervious pages
           $course_code = 1;//$_SESSION['course_id']];
-          $as_id = 1;//$_SESSION['as_id']];
+          $as_id = 2;//$_SESSION['as_id']];
           $mat_type = 'Sheets';//$_SESSION['mat_type']];
           $mat_year = 2015;//$_SESSION['mat_year']];
           $mN=array();
