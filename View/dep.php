@@ -1,8 +1,8 @@
 <?php
 include '../Controller/dep_controller.php';
 session_start();
-// $department_id = $_GET['department_id'];
-$department_id = '15';
+$department_id = $_GET['department_id'];
+// $department_id = '15';
 $data = get_dep($department_id);
 $dep_id = $data[0];
 $dep_name = $data[1];
@@ -14,6 +14,12 @@ $dep_years = get_years($dep_name);
 ?>
 <html lang="en">
 <style type="text/css">
+  .navbar {
+    border-radius: 0px;
+    margin-right: -98px;
+    margin-left: -99px;
+    font-family: 'Handlee', cursive;
+   }
 
   .fa 
   {
@@ -31,10 +37,14 @@ $dep_years = get_years($dep_name);
     padding: 20px; 
     top:100px;
   }
+  .FList{
+    position: relative;
+    top:20px;
+  }
   ul.FList li {
     display:inline;
     margin: 0 50px 0 0;
-        height: 500px;
+    height: 500px;
     width: 500px;
     font-family: 'Handlee', cursive;
   }
@@ -67,7 +77,7 @@ $dep_years = get_years($dep_name);
   .course{
     position: relative;
     left: 300px;
-    top: -150px;
+    top: -50px;
     width: 70%;
   }
 
@@ -88,8 +98,8 @@ $dep_years = get_years($dep_name);
     margin-top: 78px;
     
   }
-  #left #categorize {
-    margin-top: 100px;
+  #left .nav {
+    margin-top: 80px;
   }
   .nav li {
     text-align: center;
@@ -116,7 +126,40 @@ $dep_years = get_years($dep_name);
   .FList i{
     text-align: center;
   }
-  
+  #ann {
+    background-color:#f6f6f6; 
+    padding:14px;
+    padding-left: -500px;
+    box-shadow: 0px 0.5px 1px #888888;
+    margin-bottom: -143px;
+    z-index: 1;
+    box-shadow: 0px 1px 1px #888888;
+    position: relative;
+    top:-18px;
+  }
+  #logo2 {
+    position: relative;
+    top:0px;
+    left: 270px;
+  }
+ .item2{
+    position: relative;
+    top:0px;
+    left: 270px;
+    font-family: 'Handlee', cursive; 
+  }
+  .word2{
+    position: relative;
+    top:0px;
+    left: 270px;
+    font-family: 'Handlee', cursive;
+  }
+    .dep2{
+    position: relative;
+    top:0px;
+    left: 270px;
+    font-family: 'Handlee', cursive;
+  }
 
 
 </style>
@@ -125,6 +168,15 @@ $dep_years = get_years($dep_name);
 <head>
 	<meta charset="UTF-8">
 	<title>Department courses </title>
+
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -134,11 +186,72 @@ $dep_years = get_years($dep_name);
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-<h1 class = "headd">
-<?php
-echo $dep_name ." ". $dep_class ."th";
-?>
-</h1>
+
+
+
+<div class="container">
+    <div class="row">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header" style="display: inline;">
+            <a class="navbar-brand" href="#">
+              <img alt="Brand" src="../images/logo2.png" width="40" height="35" id="logo" style="margin-top: -10px;">
+              <ul style="margin-top: -25px;margin-left: 20px;">Faculty of Engineering</ul>
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="#" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Notification
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                <!-- Notification fns-->
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+                    aria-haspopup="true" aria-expanded="false">
+                  <?php 
+                  $id = $_SESSION['user'];
+                  viewUsername($id);
+                  ?>
+                </a>
+                <ul class="dropdown-menu" style="border-radius:0;border: 0px;
+                 background-color: #ededed;padding-bottom: 5px;">
+                 <a href="#" style=" text-decoration:none;margin-left: 30px;margin-right: 30px;color: #696969;">Sign Out</a> 
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+
+
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div> <!-- /.row -->
+  </div> <!-- /.contaier -->
+
+
+
+
+<div id="ann">
+      <div>
+      <ul class="list-inline">
+        <li><a href="#" style="margin-left: -230px;">
+                <img alt="Brand" src="../images/logo1.png" width="30" height="30" id="logo2">
+              </a>
+            </li>
+            <li class = "item2" style="text-align: left;margin-left: -230px;"><h4>Drive</h4></li>
+            <li class = "dep2" style="margin-left: 135px;font-size: 18px;"> <?php echo $dep_name ." ". $dep_class ."th"; ?></li>
+            <li class = "word2" style="margin-left: 135px;font-size: 18px;">Courses</li>
+          </ul>
+      </div>
+    </div>
+
+
 
 <div id="body">
   <div id="left" style="display:block;">
