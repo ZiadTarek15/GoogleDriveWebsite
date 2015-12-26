@@ -239,6 +239,10 @@ ALTER TABLE `view`
   ADD CONSTRAINT `fk_view` FOREIGN KEY (`course_code`) REFERENCES `course` (`course_code`),
   ADD CONSTRAINT `pk_view2` FOREIGN KEY (`as_id`) REFERENCES `academic_staff` (`as_id`);
 
+
+ALTER TABLE `graduation_project`
+  ADD project_description varchar2(10000000) not null;  
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
