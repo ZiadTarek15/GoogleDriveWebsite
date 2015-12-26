@@ -27,8 +27,8 @@
    }
    .navbar {
     border-radius: 0px;
-    margin-right: -89px;
-    margin-left: -90px;
+    margin-right: -98px;
+    margin-left: -99px;
    }
 
 </style>
