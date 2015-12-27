@@ -285,7 +285,7 @@ $dep_years = get_years($dep_name,$dep_class);
 </div> <!-- body!-->
 
 <div class= "course">
-  <form class="form-inline" method="post" action="../Controller/add_course.php">
+  <form class="form-inline" method="post" action="../Controller/add_course.php?dep_id=<?php $dep_id?>">
   <div class="form-group">
     <label for="exampleInputName2">Course-Code</label>
     <input type="text" name="CC" class="form-control" id="exampleInputName2" placeholder="course code">

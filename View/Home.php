@@ -16,9 +16,9 @@
 		
 	}
 	#left #categorize {
-		margin-top: 40px;
-	}
-	#left #ADD {
+		margin-top: 40px	}
+	#left #ADD {;
+
 		margin-left: 50px;
 		margin-top: 30px;
 	}
